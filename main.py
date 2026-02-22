@@ -12,7 +12,6 @@ if __name__ == "__main__":
     preprocessed_file = "data/preprocessed_amzn.csv"
     output_wav = "output/amzn_sonification.wav"
 
-    # Если ещё не создал preprocessed — создаём
     df = load_and_preprocess(input_file, column='AMZN', event_limit=0.10)
     save_preprocessed(df, preprocessed_file)
 

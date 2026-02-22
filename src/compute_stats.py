@@ -36,18 +36,13 @@ def compute_stats(data, column='AMZN'):
     return stats
 
 
-# Пример использования вместе с вашей функцией get_data
 if __name__ == "__main__":
-    # Допустим, файл portfolio_data.csv лежит в рабочей папке
     filepath = "../data/portfolio_data.csv"
 
-    # Загружаем данные (ваша функция)
     data, window, limit = get_data(filepath, column='AMZN')
 
-    # Вычисляем статистики для исходной цены (колонка 'AMZN')
     stats_amzn = compute_stats(data, column='AMZN')
 
-    # Выводим результат в удобном виде
     print("Статистические характеристики для AMZN:")
     for key, value in stats_amzn.items():
         print(f"{key:25}: {value:.2f}")
